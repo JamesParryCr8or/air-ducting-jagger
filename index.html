@@ -1143,6 +1143,81 @@
         }
 
         /* ============================================
+   HERO IMAGE
+   ============================================ */
+        .hero-img-wrap {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-img-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 10, 10, 0.92));
+            padding: 56px 32px 28px;
+        }
+
+        .hero-img-overlay .hero-stats {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        /* ============================================
+   PHOTO STRIP
+   ============================================ */
+        .photo-strip {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .photo-strip-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            height: 340px;
+        }
+
+        .photo-strip-img {
+            overflow: hidden;
+        }
+
+        .photo-strip-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .photo-strip-img:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .photo-strip-grid {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .photo-strip-img {
+                height: 240px;
+            }
+        }
+
+        /* ============================================
    SCROLL ANIMATIONS
    ============================================ */
         .reveal {
@@ -1322,7 +1397,7 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="hero-card">
+                    <div class="hero-img-wrap">
                         <div class="float-badge float-badge-1">
                             <div class="float-badge-dot"></div>
                             24/7 Emergency Callout
@@ -1330,22 +1405,23 @@
                         <div class="float-badge float-badge-2">
                             ⭐ 5.0 Google Rating
                         </div>
-                        <div class="hero-card-icon">🔧</div>
-                        <h3>TRUSTED BY 500+ BUSINESSES</h3>
-                        <p>From single-unit takeaways to multi-site hotel chains, we design and install extraction
-                            systems that perform — every time.</p>
-                        <div class="hero-stats">
-                            <div>
-                                <div class="hero-stat-number">15+</div>
-                                <div class="hero-stat-label">Years Experience</div>
-                            </div>
-                            <div>
-                                <div class="hero-stat-number">2,000+</div>
-                                <div class="hero-stat-label">Projects Done</div>
-                            </div>
-                            <div>
-                                <div class="hero-stat-number">100%</div>
-                                <div class="hero-stat-label">Compliance</div>
+                        <img src="iStock-1346661559.jpg"
+                            alt="Professional commercial kitchen with extraction canopy and spiral ducting"
+                            class="hero-img">
+                        <div class="hero-img-overlay">
+                            <div class="hero-stats">
+                                <div>
+                                    <div class="hero-stat-number">15+</div>
+                                    <div class="hero-stat-label">Years Experience</div>
+                                </div>
+                                <div>
+                                    <div class="hero-stat-number">2,000+</div>
+                                    <div class="hero-stat-label">Projects Done</div>
+                                </div>
+                                <div>
+                                    <div class="hero-stat-number">100%</div>
+                                    <div class="hero-stat-label">Compliance</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1494,7 +1570,7 @@
             </div>
             <div class="sectors-grid">
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #1a1a2e, #16213e);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-1162820838.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>🍽️ RESTAURANTS & HOTELS</h3>
                         <p>High-specification extraction for fine dining, hotel kitchens, and multi-outlet hospitality
@@ -1502,7 +1578,7 @@
                     </div>
                 </div>
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #1a2e1a, #162e16);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-2202685404.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>🍔 TAKEAWAYS & FAST FOOD</h3>
                         <p>Efficient systems for high-throughput takeaway kitchens — designed for speed, compliance, and
@@ -1510,7 +1586,7 @@
                     </div>
                 </div>
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #2e1a1a, #2e1616);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-2227314225.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>☕ CAFÉS & BAKERIES</h3>
                         <p>Compact extraction solutions for cafés, coffee shops, and artisan bakeries with limited
@@ -1518,14 +1594,14 @@
                     </div>
                 </div>
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #1a1a2e, #1e1a2e);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-165815603.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>🏫 SCHOOLS & UNIVERSITIES</h3>
                         <p>Safe, compliant kitchen ventilation for educational catering facilities — built to last.</p>
                     </div>
                 </div>
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #2e2e1a, #2e2a16);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-2227161625.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>🏥 HOSPITALS & CARE HOMES</h3>
                         <p>Hygienic extraction systems meeting strict healthcare regulations and infection control
@@ -1533,13 +1609,25 @@
                     </div>
                 </div>
                 <div class="sector-card reveal">
-                    <div class="sector-card-bg" style="background: linear-gradient(135deg, #1a2e2e, #162e2a);"></div>
+                    <div class="sector-card-bg" style="background-image: url('iStock-157378998.jpg');"></div>
                     <div class="sector-card-content">
                         <h3>🏭 INDUSTRIAL & FACTORY</h3>
                         <p>Large-scale industrial ventilation, fume extraction, and LEV systems for manufacturing
                             environments.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PHOTO STRIP ===================== -->
+    <section class="photo-strip">
+        <div class="photo-strip-grid">
+            <div class="photo-strip-img">
+                <img src="iStock-1448168814.jpg" alt="Stainless steel commercial extraction ducting installation">
+            </div>
+            <div class="photo-strip-img">
+                <img src="iStock-2197672364.jpg" alt="Spiral ventilation ductwork running through commercial venue">
             </div>
         </div>
     </section>
